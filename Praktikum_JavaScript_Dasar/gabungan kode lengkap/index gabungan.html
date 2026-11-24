@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Praktikum JS</title>
+</head>
+
+<body>
+  <h1>Halo JavaScript</h1>
+
+  <input type="text" id="nama" placeholder="Nama Anda">
+  <button onclick="sapa()">Sapa</button>
+  <p id="hasil"></p>
+
+  <script>
+    // 1.4 Cara Menyisipkan JavaScript
+    console.log("Halo, dunia!");
+
+    // 2.1 Variabel dan Tipe Data
+    let nama = "Budi";   // string
+    const umur = 20;     // number
+    let aktif = true;    // boolean
+    console.log(typeof nama);  // "string"
+    console.log("Nama: " + nama + ", umur: " + umur);
+
+    // 2.2 Operator
+    let a = 10, b = 3;
+    console.log(a + b);          // 13
+    console.log(a % b);          // 1 (sisa bagi)
+    console.log(a > b && b > 0); // true
+
+    // 2.3 Percabangan (if ... else)
+    let nilai = 78;
+    if (nilai >= 80) {
+      console.log("Grade A");
+    } else if (nilai >= 70) {
+      console.log("Grade B");
+    } else {
+      console.log("Grade C");
+    }
+
+    // 2.4 Perulangan (for)
+    for (let i = 1; i <= 5; i++) {
+      console.log("Perulangan ke-" + i);
+    }
+
+    // 2.5 Fungsi
+    function luasPersegi(sisi) {
+      return sisi * sisi;
+    }
+    console.log(luasPersegi(5)); // 25
+
+    // 2.6 DOM dan Event
+    function sapa() {
+      let nama = document.getElementById("nama").value;
+      document.getElementById("hasil").textContent = "Halo, " + nama + "!";
+    }
+
+    // 2.7 Array dan Method console
+    let buah = ["Apel", "Jeruk", "Mangga"];
+    buah.push("Pisang");
+    console.log(buah[0]);      // Apel
+    console.log(buah.length);  // 4
+    for (let i = 0; i < buah.length; i++) {
+      console.log((i + 1) + ". " + buah[i]);
+    }
+  </script>
+</body>
+
+</html>
